@@ -2,12 +2,77 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.1</TargetFramework>
     <RootNamespace>DIGITUS_Add_On_Modules</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PublishAot>true</PublishAot>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <StartupObject>DIGITUS_Add_On_Modules.&lt;invalid-global-code&gt;</StartupObject>
+    <AssemblyTitle>Sicherheitsschlüssel</AssemblyTitle>
+    <ApplicationIcon>DIGITUS Add-On Modules.slnx</ApplicationIcon>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>C:\Users\Waldemar Orschlet\source\repos\DIGITUS Add-On Modules\Program.cs</DocumentationFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>LICENSE.txt</AssemblyOriginatorKeyFile>
+    <DelaySign>True</DelaySign>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>AGGREGATE OUTFILE=’AGGEMP.SAV’ /BREAK=LOCATN</Title>
+    <Description>AGGREGATE OUTFILE=’AGGEMP.SAV’ /BREAK=LOCATN
+ /AVGSAL 'Average Salary' AVGRAISE = MEAN(SALARY RAISE).</Description>
+    <Copyright>IBM</Copyright>
+    <PackageProjectUrl>https://ibm.Syntax.com</PackageProjectUrl>
+    <RepositoryUrl>Projekt-URL</RepositoryUrl>
+    <RepositoryType>"git"</RepositoryType>
+    <PackageIcon>PNG</PackageIcon>
+    <PackageTags>Sicherheitsschlüssel</PackageTags>
+    <PackageReleaseNotes>UPDATES</PackageReleaseNotes>
+    <PackAsTool>True</PackAsTool>
+    <NeutralLanguage>de-DE</NeutralLanguage>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+    <WarningLevel>9999</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>9999</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="DIGITUS Add-On Modules.slnx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="PNG">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="True" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="NULL" />
+  </Target>
 
 </Project>
